@@ -23,7 +23,7 @@ export const FIND_PERSON = gql`
   }
 `
 
-export const CREATE_PESRON = gql`
+export const CREATE_PERSON = gql`
   mutation createPerson(
     $name: String!
     $phone: String!
