@@ -1,18 +1,6 @@
-import { gql, useLazyQuery } from '@apollo/client'
+import { useLazyQuery } from '@apollo/client'
 import { useEffect, useState } from 'react'
-
-const FIND_PERSON = gql`
-  query findPersonByName($nameToSearch: String!) {
-    findPerson(name: $nameToSearch) {
-      name
-      phone
-      address {
-        street
-        city
-      }
-    }
-  }
-`
+import { FIND_PERSON } from '../queries'
 
 const Persons = ({ persons }) => {
   const [getPerson, result] = useLazyQuery(FIND_PERSON)
